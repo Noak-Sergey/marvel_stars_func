@@ -1,8 +1,5 @@
-import { useParams, Link } from 'react-router-dom';
-import { useState, useEffect } from 'react';
-import useMarvelService from '../../../services/MarvelService';
-import Spinner from '../../spinner/Spinner';
-import ErrorMessage from '../../errorMessage/ErrorMessage';
+import { Link } from 'react-router-dom';
+
 import './singleComicPage.scss';
 
 // const SingleComicPage = () => {
@@ -39,8 +36,8 @@ import './singleComicPage.scss';
 //     )
 // }
 
-const SingleComicPage = ({comic}) => {
-    const {title, description, pageCount, thumbnail, language, price} = comic;
+const SingleComicPage = ({data}) => {
+    const {title, description, pageCount, thumbnail, language, price} = data;
 
     return(
         <div className="single-comic">
